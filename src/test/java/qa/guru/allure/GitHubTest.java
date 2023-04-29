@@ -16,7 +16,13 @@ public class GitHubTest {
 
     @Test
     public void searchForIssue() {
-//        Configuration.remote = "http://localhost:4444/wd/hub";
+
+        String remoteRun = System.getProperty("remote");
+
+        if (remoteRun != null) {
+            Configuration.remote = "http://localhost:4444/wd/hub";
+        }
+
         SelenideLogger.addListener("allure", new AllureSelenide());
 
         open("https://github.com");

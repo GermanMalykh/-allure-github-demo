@@ -61,13 +61,13 @@ public class GitHubTest {
     }
 
     @Test
-    @DisplayName("Search for issue with number 88")
+    @DisplayName("Search for issue with number 81")
     public void searchForIssue2() {
         WebSteps steps = new WebSteps();
         steps.openMainPage();
         steps.searchForRepository("allure-example");
         steps.openRepositoryByLink("eroshenkoam/allure-example");
         steps.openIssuesTab();
-        steps.shouldSeeIssueWithNumber(88);
+        steps.shouldSeeIssueWithNumber(81);
     }
 }

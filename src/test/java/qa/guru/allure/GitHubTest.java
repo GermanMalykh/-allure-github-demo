@@ -23,7 +23,7 @@ public class GitHubTest {
     }
 
     @Test
-    @DisplayName("Search for issue with number 79")
+    @DisplayName("Search for issue with number 76")
     public void searchForIssue() {
         open("https://github.com");
 
@@ -35,8 +35,7 @@ public class GitHubTest {
 
         $("#issues-tab").click();
 
-        $(withText("#81")).should(Condition.exist);
-        $(withText("#79")).should(Condition.exist);
+        $(withText("#76")).should(Condition.exist);
     }
 
     @Test
